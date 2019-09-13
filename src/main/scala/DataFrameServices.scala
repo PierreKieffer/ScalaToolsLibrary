@@ -65,7 +65,7 @@ object DataFrameServices {
 
   def jsonToDF(sparkSession: SparkSession, inputJson : String) : DataFrame = {
 
-    /**
+    /** Format json string to spark dataframe
       * val input = "{"id":"id_example","list":[{"timestamp":"1568375546","Field1":{"value1":-24,"value2":12.10},"Field2":{"value1":"example_val","value2":"example_val"}},{"timestamp":"1568375546","Field1":{"value1":-24,"value2":12.10},"Field2":{"value1":"example_val","value2":"example_val"}}]}"
       *
       *
