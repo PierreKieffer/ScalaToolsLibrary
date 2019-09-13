@@ -22,9 +22,6 @@ import scala.concurrent.ExecutionContext.Implicits.global
 
 object AkkaServices extends AkkaActor {
 
-  /** Simple http get request */
-
-
   def getData(uri: String, settings : akka.http.scaladsl.settings.ConnectionPoolSettings, proxy : Boolean) = {
     /** Method to do a simple http get request*/
 
