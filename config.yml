@@ -1,0 +1,6 @@
+
+# Proxy configuration
+# If proxy = True, you have to set proxyHost and proxyPort
+proxy : "True"
+proxyHost: "10.66.243.130"
+proxyPort: "8080"
