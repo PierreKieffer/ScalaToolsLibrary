@@ -26,7 +26,7 @@ object AkkaServices extends AkkaActor {
 
 
   def getData(uri: String, settings : akka.http.scaladsl.settings.ConnectionPoolSettings, proxy : Boolean) = {
-    /** Method to do a simple http get request and return json content*/
+    /** Method to do a simple http get request*/
 
     if (proxy){
       val request = HttpRequest(HttpMethods.GET, uri)
@@ -53,7 +53,7 @@ object AkkaServices extends AkkaActor {
 
 
   def getDataSession(loginUri : String ,uri: String, settings : akka.http.scaladsl.settings.ConnectionPoolSettings, proxy : Boolean) = {
-    /** Method to do a http get request with cookies and return json content*/
+    /** Method to do a http get request with cookies*/
 
       if (proxy){
 
