@@ -1,5 +1,7 @@
 import org.apache.spark.sql.{DataFrame, SparkSession}
 import org.apache.spark.sql.functions._
+import java.io.{File, PrintWriter}
+
 
 object DataFrameServices {
 
@@ -78,7 +80,9 @@ object DataFrameServices {
       * +----------+-------------+-------------+-------------+-------------+
       * |id_example|          -24|         12.1|  example_val|  example_val|
       * |id_example|          -24|         12.1|  example_val|  example_val|
-      * +----------+-------------+-------------+-------------+-------------+*/
+      * +----------+-------------+-------------+-------------+-------------+
+      *
+      * */
 
     import sparkSession.implicits._
 
@@ -101,4 +105,24 @@ object DataFrameServices {
 
     outputDataFrame
   }
+
+  def dataframeSchemaToJson(dataframe : DataFrame, jsonFilePath : String) : Unit = {
+
+    /** Method to extract a dataframe schema and save it as json file
+      * jsonFilePath = "/home/.../schema.json"*/
+    try {
+      val schema = dataframe.schema.json
+      val writer = new PrintWriter(new File(jsonFilePath))
+      writer.write(schema)
+      writer.close()
+    } catch {
+      case e: Exception => {
+        println(
+          s""" ERROR :
+             | $e
+             | """.stripMargin)
+      }
+    }
+  }
+
 }
