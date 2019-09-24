@@ -23,6 +23,9 @@ libraryDependencies += "com.lihaoyi" %% "requests" % "0.1.9"
 // https://mvnrepository.com/artifact/io.spray/spray-http
 libraryDependencies += "io.spray" %% "spray-http" % "1.3.4"
 
+// https://mvnrepository.com/artifact/com.google.cloud.bigtable/bigtable-hbase-1.x
+libraryDependencies += "com.google.cloud.bigtable" % "bigtable-hbase-1.x" % "1.11.0"
+
 
 
 
