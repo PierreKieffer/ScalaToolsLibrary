@@ -46,7 +46,6 @@ object JsonParser {
       }*/
 
     val JsonData : String = Source.fromFile(JsonDataFile).getLines.mkString
-
     val jsonFormatData = JSON.parseFull(JsonData).map{
       case json : Map[String, List[Map[String,String]]] =>
         json("fields").map(v => ListStructJsonParserData(v("field1"),v("field2"),v("field3")))
