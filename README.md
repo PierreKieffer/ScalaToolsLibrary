@@ -8,7 +8,7 @@ Methods to format different data types to Spark Dataframes
 ## AkkaServices
 Methods to apply Akka http requests 
 ## BigTableConnector
-Methods to create or Ddlete tables 
+Methods to create or Delete tables 
 Methods to read from tables and write to tables
 ## utils 
 ### AppConfiguration
