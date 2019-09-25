@@ -4,3 +4,7 @@
 proxy : "True"
 proxyHost: "10.66.243.130"
 proxyPort: "8080"
+
+# Akka route configuration
+interface: "localhost"
+port: "8080"
