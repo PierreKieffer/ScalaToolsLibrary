@@ -11,6 +11,8 @@ trait AppConfiguration {
 
   var proxyHost = ""
   var proxyPort = ""
+  var interface = ""
+  var port = ""
 
   def initializeAppConfig(configFilePath : String) : Unit = {
 
@@ -20,6 +22,8 @@ trait AppConfiguration {
     props = confObj.asInstanceOf[java.util.HashMap[String,String]]
     proxyHost = props.get("proxyHost")
     proxyPort = props.get("proxyPort")
+    interface = props.get("interface")
+    port = props.get("port")
 
 
   }
