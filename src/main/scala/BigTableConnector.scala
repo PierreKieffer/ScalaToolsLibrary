@@ -65,9 +65,9 @@ object BigTableConnector {
         // Get a row by key
         val rowKey = "key_example"
         val getResult = table.get(new Get(Bytes.toBytes(rowKey)))
-        val greeting = Bytes.toString(getResult.getValue(COLUMN_FAMILY_NAME, COLUMN_NAME))
-        System.out.println("Get a single greeting by row key")
-        System.out.printf("\t%s = %s\n", rowKey, greeting)
+        val data = Bytes.toString(getResult.getValue(COLUMN_FAMILY_NAME, COLUMN_NAME))
+        System.out.println("Get data by row key")
+        System.out.printf("\t%s = %s\n", rowKey, data)
 
         // Scan all rows.
         val scan = new Scan
